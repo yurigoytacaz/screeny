@@ -1,0 +1,71 @@
+/**
+ * Criado em 28 de Maio de 2011
+ * por Yuri Goytacaz (yurigoytacaz@gmail.com)
+**/
+
+@font-face{font-family:'akgl';src: url('fonts/akzidenzgrotesk-lightcond_copy-webfont.eot');src: url('fonts/akzidenzgrotesk-lightcond_copy-webfont.eot?#iefix') format('embedded-opentype'),url('fonts/akzidenzgrotesk-lightcond_copy-webfont.woff') format('woff'),url('fonts/akzidenzgrotesk-lightcond_copy-webfont.ttf') format('truetype'),url('fonts/akzidenzgrotesk-lightcond_copy-webfont.svg#AkzidenzGroteskBQLightCondeRg') format('svg');font-weight: normal;font-style: normal;}
+/*@font-face{font-family:'akgm';src:url('fonts/akzidenzgrotesk-mediumcondalt-webfont.eot');src:url('fonts/akzidenzgrotesk-mediumcondalt-webfont.eot?#iefix') format('embedded-opentype'),url('fonts/akzidenzgrotesk-mediumcondalt-webfont.woff') format('woff'),url('fonts/akzidenzgrotesk-mediumcondalt-webfont.ttf') format('truetype'),url('fonts/akzidenzgrotesk-mediumcondalt-webfont.svg#AkzidenzGroteskBQCondensedAMd') format('svg');font-weight:normal;font-style:normal;}*/
+/*@font-face{font-family:'akgc';src: url('fonts/akzidenzgrotesk-cond-webfont.eot');src: url('fonts/akzidenzgrotesk-cond-webfont.eot?#iefix') format('embedded-opentype'),url('fonts/akzidenzgrotesk-cond-webfont.woff') format('woff'),url('fonts/akzidenzgrotesk-cond-webfont.ttf') format('truetype'),url('fonts/akzidenzgrotesk-cond-webfont.svg#AkzidenzGroteskBQCondensedRg') format('svg');font-weight: normal;font-style: normal;}*/
+
+/* 01 Html & Body
+------------------------------------------------------*/
+* { padding:0; margin:0; }
+html { font-family:"akgl", Helvetica, Arial, sans-serif; background-color:#eee; }
+body { width:100%; height:100%; padding:50px 0 0 0; margin:0; }
+
+/* 02 Wrapper
+------------------------------------------------------*/
+div#wrapper { position:relative; width:100%; height:100%; padding:0; margin:0; }
+
+/* 03 Header
+------------------------------------------------------*/
+header { position:fixed; top:0; z-index:10; width:100%; height:50px; color:#fff; /*background-color:#111;*/ background:-moz-linear-gradient(19% 75% 90deg,#111111, #222222, #333333 100%); background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#222), to(#111), color-stop(.0,#222)); }
+header h1 { float:left; display:block; margin:0 15px 0 15px; line-height:50px; font-size:30px; }
+header a.about { float:left; display:block; line-height:50px; color:#666; font-size:20px; text-transform:lowercase; }
+header a.about:hover { color:#fff; }
+header a.about.on { text-decoration:none; color:#fff; }
+header a.about.on:hover { text-decoration:underline; }
+header div.more { position:fixed; top:50px; width:100%; height:0; /*background-color:#111;*/ background-image:-webkit-gradient(linear,left bottom,left top,color-stop(0.23,rgb(0,0,0)),color-stop(0.62,rgb(17,17,17)));background-image:-moz-linear-gradient(center bottom,rgb(0,0,0) 23%,rgb(17,17,17) 62%); overflow:hidden; }
+header div.more section { float:left; width:380px; padding:20px; font-size:14px; color:#999; font-family:"Helvetica Neue", Helvetica, Arial, sans-serif; }
+header div.more section h2 { font-size:20px; color:#fff; font-family:'akgl'; }
+header div.more section a { color:#fff; text-decoration:none; }
+header div.more section a:hover { text-decoration:underline; }
+header div.more section#about p.credits { display:block; padding:5px 0 0 0; font-size:14px; }
+header div.more section#share { width:120px; padding:20px 0; }
+header div.more section#share h2 { display:none; }
+header div.more section#share a.twitter-share-button,
+header div.more section#share iframe { float:left; }
+
+/* 04 Nav
+------------------------------------------------------*/
+nav { position:fixed; z-index:11; top:0px; left:50%; width:200px; height:50px; margin:0 0 0 -100px; }
+nav strong { display:block; height:50px; padding:0 10px; cursor:pointer; text-align:center; line-height:50px; color:#666; font-weight:normal; text-transform:uppercase; font-size:20px; }
+nav strong:hover { color:#fff; background-color:#111; }
+nav.on strong { color:#eee; background-color:#111; }
+nav ul { height:0; list-style:none; overflow:hidden; }
+nav ul li { }
+nav ul li span { display:block; height:49px; padding:0 10px; line-height:50px; cursor:pointer; border-bottom:1px solid #111; color:#666; background:-moz-linear-gradient(19% 75% 90deg,#111111, #151515, #222 100%); background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#222), to(#111), color-stop(.0,#222)); }
+nav ul li span:hover { color:#ccc; background:#252525; }
+nav ul li span.active { color:#eee; background:#111; }
+nav ul li span.active:hover { color:#fff; background:#151515; }
+
+/* 05 Content
+------------------------------------------------------*/
+div#content { }
+
+div#sizes { }
+div#sizes div.resolution { position:absolute; top:0; left:0; display:none; background-color:rgba(0, 0, 0, 0.2); /*background-color:#666; opacity:0.5;*/ overflow:hidden; }
+div#sizes div.resolution span { position:absolute; bottom:-4px; right:1px; font-size:20px; font-weight:normal; }
+div#sizes div.resolution.size2560x1440 { width:2560px; height:1440px; color:#333; }
+div#sizes div.resolution.size1920x1080 { width:1920px; height:1080px; color:#333; }
+div#sizes div.resolution.size1680x1050 { width:1680px; height:1050px; color:#333; }
+div#sizes div.resolution.size1440x900 { width:1440px; height:900px; color:#333; }
+div#sizes div.resolution.size1366x768 { width:1366px; height:768px; color:#eee; }
+div#sizes div.resolution.size1280x800 { width:1280px; height:800px; color:#eee; }
+div#sizes div.resolution.size1024x768 { width:1024px; height:768px; color:#eee; }
+div#sizes div.resolution.size960x640 { width:960px; height:640px; color:#eee; }
+div#sizes div.resolution.size430x320 { width:430px; height:320px; color:#eee; }
+
+/* 06 Footer
+------------------------------------------------------*/
+footer { position:fixed; z-index:12; top:15px; right:15px; color:#666; }
