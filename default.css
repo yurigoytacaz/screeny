@@ -43,7 +43,7 @@ div#nav { position:fixed; z-index:11; top:0px; left:50%; width:200px; height:50p
 div#nav strong.resolutions { display:block; height:50px; padding:0 10px; cursor:pointer; text-align:center; line-height:50px; color:#999; font-weight:normal; text-transform:uppercase; font-size:20px; }
 div#nav strong.resolutions:hover { color:#fff; background-color:#111; }
 div#nav.active strong.resolutions { color:#eee; background-color:#111; }
-div#nav ul { /*height:0;*/ list-style:none; overflow:hidden; }
+div#nav ul { height:0; list-style:none; overflow:hidden; }
 div#nav ul li { overflow:hidden; }
 div#nav ul li.custom { position:relative; display:block; height:49px; text-align:right; line-height:50px; font-size:18px; cursor:pointer; border-bottom:1px solid #111; color:#999; background:#000; }
 div#nav ul li.custom:hover em { color:#fff; }
@@ -63,6 +63,7 @@ div#content { }
 div#sizes { }
 div#sizes div.resolution { position:absolute; top:0; left:0; display:none; background-color:rgba(0, 0, 0, 0.2); /*background-color:#666; opacity:0.5;*/ overflow:hidden; }
 div#sizes div.resolution span { position:absolute; bottom:-4px; right:1px; font-size:20px; font-weight:normal; }
+div#sizes div.resolution.custom { color:#000; }
 div#sizes div.resolution.size2560x1440 { width:2560px; height:1440px; color:#333; }
 div#sizes div.resolution.size1920x1080 { width:1920px; height:1080px; color:#333; }
 div#sizes div.resolution.size1680x1050 { width:1680px; height:1050px; color:#333; }

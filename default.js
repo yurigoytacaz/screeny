@@ -11,7 +11,7 @@ $(document).ready(function() {
 
 		if ( $('#nav').hasClass('active') ) {
 			$('#nav').removeClass('active');
-			$('#nav ul').animate({height: 0}, 100);
+			$('#nav ul').animate({height: 0}, 200);
 		} else {
 			$('#nav').addClass('active');
 			$('#nav ul').animate({height: 450}, 200);
@@ -117,11 +117,9 @@ $(document).ready(function() {
 			
 
 			// $('#nav ul').append('<li style="width:' + resolWidth + 'px;height:' + resolHeight + 'px;"><span>' + resolWidth + 'x' + resolHeight + ' <strong>Custom</strong></span></li>')
-			$('<li style="height:0px;" class="size' + resolWidth + 'x' + resolHeight + '"><span>' + resolWidth + 'x' + resolHeight + ' <strong contenteditable="true">Custom</strong></span></li>').animate({height:49},100).insertBefore('#nav li.custom')
+			$('<li style="height:0px;" class="size' + resolWidth + 'x' + resolHeight + '"><span>' + resolWidth + 'x' + resolHeight + ' <strong contenteditable="true">Custom</strong></span></li>').animate({height:49},100).insertBefore('#nav li.custom');
 
-			
-
-			$('#sizes').append('<div width="' + resolWidth + 'px;height:' + resolHeight + 'px;" class="resolution size' + resolWidth + 'x' + resolHeight + '"><span>Custom ' + resolWidth + 'x' + resolHeight + '</span></div>');
+			$('<div style="width:' + resolWidth + 'px;height:' + resolHeight + 'px;" class="resolution custom size' + resolWidth + 'x' + resolHeight + '"><span>Custom ' + resolWidth + 'x' + resolHeight + '</span></div>').insertBefore('#sizes div.cinema');
 			
 			
 			// checa se o input tem apenas letras
