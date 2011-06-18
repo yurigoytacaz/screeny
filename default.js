@@ -5,7 +5,9 @@ if (typeof console == "undefined" || typeof console.log == "undefined")
 }
 
 $(document).ready(function() {
-
+	
+	navHeight = 500
+	
 	// exibe o menu ao clicar em RESOLUTIONS
 	$('#nav strong').click(function() {
 
@@ -14,7 +16,7 @@ $(document).ready(function() {
 			$('#nav ul').animate({height: 0}, 200);
 		} else {
 			$('#nav').addClass('active');
-			$('#nav ul').animate({height: 500}, 200);
+			$('#nav ul').animate({height: navHeight}, 200);
 		};
 
 	});
@@ -124,13 +126,17 @@ $(document).ready(function() {
 
 				$('<div style="width:' + resolWidth + 'px;height:' + resolHeight + 'px;" class="resolution custom size' + resolWidth + 'x' + resolHeight + '"><span>Custom ' + resolWidth + 'x' + resolHeight + '</span></div>').insertBefore('#sizes div.cinema');
 
+				navHeight = navHeight + 50
+
+				$('#nav ul').animate({height: navHeight}, 50);
+
 				$(this).removeClass('valid').val('i.e.: 800x600').blur();
 				iCounter = 1;
 			} else {
 				console.log('faltou o X')
 				console.log(iCounter)
 				if(iCounter == 3){
-					alert("Tu é insistente, hein?\n Bota um X entre nos números que funfa.");
+					alert("You're missing the X.\nTry 800x600");
 				}else{
 					iCounter++;
 				}
