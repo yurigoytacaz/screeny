@@ -47,7 +47,7 @@ div#nav ul { height:0; list-style:none; overflow:hidden; }
 div#nav ul li { overflow:hidden; }
 div#nav ul li.custom { position:relative; display:block; height:49px; text-align:right; line-height:50px; font-size:18px; cursor:pointer; border-bottom:1px solid #111; color:#999; background:#000; }
 div#nav ul li.custom:hover em { color:#fff; }
-div#nav ul li.custom em { float:left; display:block; padding:0 0 0 10px; font-style:normal; text-transform:uppercase; }
+div#nav ul li.custom em { float:left; display:block; padding:0 0 0 10px; font-style:normal; /*text-transform:uppercase;*/ }
 div#nav ul li.custom input { float:right; display:block; width:75px; height:48px; padding:0 10px; text-align:right; font-family:'akgl'; font-size:18px; border:none; color:#555; background-color:transparent; }
 div#nav ul li.custom input:focus { color:#fff; background-color:transparent; }
 div#nav ul li span { display:block; height:49px; padding:0 10px; text-align:right; line-height:50px; font-size:18px; cursor:pointer; border-bottom:1px solid #111; color:#999; background:-moz-linear-gradient(19% 75% 90deg,#111111, #151515, #222 100%); background:-webkit-gradient(linear, 0% 0%, 0% 100%, from(#222), to(#111), color-stop(.0,#222)); }

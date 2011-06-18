@@ -14,7 +14,7 @@ $(document).ready(function() {
 			$('#nav ul').animate({height: 0}, 200);
 		} else {
 			$('#nav').addClass('active');
-			$('#nav ul').animate({height: 450}, 200);
+			$('#nav ul').animate({height: 500}, 200);
 		};
 
 	});
@@ -101,37 +101,41 @@ $(document).ready(function() {
 
 	// $('#nav li.custom input').setMask('9999:9999').val('i.e.: 800:600');
 
+	iCounter = 1;
 	$('#nav li.custom input').bind('keypress', function(event) {
 
 		var code = (event.keyCode ? event.keyCode : event.which);
 		if(code == 13) { // Enter keycode
 			
 			resolEntered = $(this).val()
-			console.log( resolEntered )
+			console.log('custom:' + resolEntered )
 
 			var resolReturn = resolEntered.split("x");
 			resolWidth = resolReturn[0]
 			resolHeight = resolReturn[1]
-			console.log( resolReturn[0] );
-			console.log( resolReturn[1] );
-			
-
-			// $('#nav ul').append('<li style="width:' + resolWidth + 'px;height:' + resolHeight + 'px;"><span>' + resolWidth + 'x' + resolHeight + ' <strong>Custom</strong></span></li>')
-			$('<li style="height:0px;" class="size' + resolWidth + 'x' + resolHeight + '"><span>' + resolWidth + 'x' + resolHeight + ' <strong contenteditable="true">Custom</strong></span></li>').animate({height:49},100).insertBefore('#nav li.custom');
-
-			$('<div style="width:' + resolWidth + 'px;height:' + resolHeight + 'px;" class="resolution custom size' + resolWidth + 'x' + resolHeight + '"><span>Custom ' + resolWidth + 'x' + resolHeight + '</span></div>').insertBefore('#sizes div.cinema');
-			
 			
 			// checa se o input tem apenas letras
-			// $(this).filter(function() {
-			// 	return this.value.match(/[^\d]/);
-			// }).addClass("error");
-			// 
-			// if ( $(this).hasClass('error') ) {
-			// 	console.log('deu erro')
-			// };
-			
-			$(this).val('i.e.: 800x600');
+			$(this).filter(function() {
+				return this.value.match(/x/g);
+				}).addClass("valid");
+
+			if ( $(this).hasClass('valid') ) {
+				$('<li style="height:0px;" class="size' + resolWidth + 'x' + resolHeight + '"><span>' + resolWidth + 'x' + resolHeight + ' <strong contenteditable="true">Custom</strong></span></li>').animate({height:49},100).insertBefore('#nav li.custom');
+
+				$('<div style="width:' + resolWidth + 'px;height:' + resolHeight + 'px;" class="resolution custom size' + resolWidth + 'x' + resolHeight + '"><span>Custom ' + resolWidth + 'x' + resolHeight + '</span></div>').insertBefore('#sizes div.cinema');
+
+				$(this).removeClass('valid').val('i.e.: 800x600').blur();
+				iCounter = 1;
+			} else {
+				console.log('faltou o X')
+				console.log(iCounter)
+				if(iCounter == 3){
+					alert("Tu é insistente, hein?\n Bota um X entre nos números que funfa.");
+				}else{
+					iCounter++;
+				}
+
+			};
 			
 		}
 	});
