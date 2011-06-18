@@ -13,10 +13,11 @@
 	<link rel="shortcut icon" href="icon.png" />
 	<!-- <link rel="apple-touch-icon" href="http://screeny.in/appletouchicon.png" /> -->
 	<link rel="stylesheet" type="text/css" href="default.css" media="all" />
+	<link rel="stylesheet" type="text/css" href="mq.css" media="all" />
 </head>
 <body>
 <div id="wrapper">
-	<header>
+	<div id="header">
 		<h1>Screeny</h1>
 		<a href="#" class="about">About</a>
 		<div class="more">
@@ -43,22 +44,27 @@
 				<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://screeny.in/" data-text="Compare screen size and resolution with Screeny by @yurigoytacaz" data-count="vertical">Tweet</a> 
 				<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script> 
 			</section>
-		</div>
-		<nav>
-			<strong>Resolutions</strong>
-			<ul>
-				<li class="size480x320"><span class="active">480x320 (iPhone)</span></li>
-				<li class="size960x640"><span class="active">960x640 (iPhone 4)</span></li>
-				<li class="size1024x768"><span class="active">1024x768 (iPad)</span></li>
-				<li class="size1280x800"><span>1280x800 (MacBook Pro 13")</span></li>
-				<li class="size1366x768"><span>1366x768 (HDTV)</span></li>
-				<li class="size1440x900"><span>1400x900 (MacBook Pro 15")</span></li>
-				<li class="size1680x1050"><span>1680x1050 (MacBook Pro Hi-Res)</span></li>
-				<li class="size1920x1080"><span>1920x1080 (Full HD)</span></li>
-				<li class="size2560x1440"><span>2560x1440 (LED Cinema Display)</span></li>
-			</ul>
-		</nav>
-	</header>
+		</div><!-- .more -->
+	</div><!-- #header -->
+	<div id="nav">
+		<strong class="resolutions">Resolutions</strong>
+		<ul>
+			<li class="size480x320"><span class="active">480x320 <strong>iPhone</strong></span></li>
+			<li class="size960x640"><span class="active">960x640 <strong>iPhone 4</strong></span></li>
+			<li class="size1024x768"><span class="active">1024x768 <strong>iPad</strong></span></li>
+			<!-- <li class="size1280x800"><span>1280x800 <strong>MacBook Pro 13"</strong></span></li> -->
+			<!-- <li class="size1366x768"><span>1366x768 <strong>HDTV</strong></span></li> -->
+			<!-- <li class="size1440x900"><span>1400x900 <strong>MacBook Pro 15"</strong></span></li> -->
+			<!-- <li class="size1680x1050"><span>1680x1050 <strong>MacBook Pro Hi-Res</strong></span></li> -->
+			<li class="size1920x1080"><span>1920x1080 <strong>Full HD</strong></span></li>
+			<!-- <li class="size2560x1440"><span>2560x1440 <strong>LED Cinema Display</strong></span></li> -->
+			<li class="custom">
+				<em>[Insert here]</em>
+				<input type="text" value="(i.e.: 800x600)" />
+				<!-- <em contenteditable="true">Custom</em> -->
+			</li>
+		</ul>
+	</div><!-- #nav -->
 	<div id="content">
 		<div id="sizes">
 			<div class="resolution size2560x1440 cinema"><span>LED Cinema Display 2560x1440</span></div>
@@ -72,25 +78,26 @@
 			<div class="resolution size480x320 iphone"><span>iPhone 480x320</span></div>
 		</div>
 	</div><!-- #content -->
-	<footer>
-		Copyright © 2011 Yuri Goytacaz. All rights reserved.
-	</footer>
-</div>
+	<div id="footer">
+		<small>content on this site is licensed under a <a href="http://creativecommons.org/licenses/by/3.0/" title="creative commons attribution 3.0 license">creative commons</a></small>
+	</div><!-- #footer -->
+</div><!-- #wrapper -->
 </body>
 <script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-10807205-7']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+  // var _gaq = _gaq || [];
+  // _gaq.push(['_setAccount', 'UA-10807205-7']);
+  // _gaq.push(['_trackPageview']);
+  // 
+  // (function() {
+  //   var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+  //   ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+  //   var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  // })();
 
 </script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script>
-<!-- <script type="text/javascript" src="jquery-1.6.1.min.js"></script> -->
+<!-- <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js"></script> -->
+<script type="text/javascript" src="jquery-1.6.1.min.js"></script>
+<script type="text/javascript" src="jquery.meio.mask.js"></script>
 <script type="text/javascript" src="default.js"></script>
 </html>

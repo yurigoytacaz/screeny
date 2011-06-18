@@ -3,7 +3,9 @@ smaller than 980
 *************************************************************************************/
 @media screen and (max-width: 980px) {
 
+/*	div#sizes div.resolution { background-color:rgba(0, 0, 100, 0.2); }*/
 	
+	html,body,div#wrapper,div#header { width:1224px; }
 	
 }
 
@@ -12,12 +14,13 @@ smaller than 650
 *************************************************************************************/
 @media screen and (max-width: 650px) {
 
+/*	div#sizes div.resolution { background-color:rgba(0, 100, 0, 0.2); }*/
 	
 	
 }
 
 /************************************************************************************
-smaller than 560
+smaller than 480
 *************************************************************************************/
 @media screen and (max-width: 480px) {
 
@@ -26,6 +29,7 @@ smaller than 560
 		-webkit-text-size-adjust: none;
 	}
 
+/*	div#sizes div.resolution { background-color:rgba(100, 0, 100, 0.2); }*/
 	
 	
 }
