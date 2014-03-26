@@ -10,9 +10,9 @@ smaller than 980
 }
 
 /************************************************************************************
-smaller than 650
+smaller than 640
 *************************************************************************************/
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 640px) {
 
 /*	div#sizes div.resolution { background-color:rgba(0, 100, 0, 0.2); }*/
 	
@@ -22,7 +22,7 @@ smaller than 650
 /************************************************************************************
 smaller than 480
 *************************************************************************************/
-@media screen and (max-width: 480px) {
+@media screen and (max-device-width: 480px) {
 
 	/* disable webkit text size adjust (for iPhone) */
 	html {
